@@ -72,7 +72,7 @@ def header(c):
     p.append(text(44, 142, "Networks, monitoring, automation, Rust CLI tools",
                   c["soft"], 15.5))
     rows = [
-        ["Rust", "Linux", "MikroTik", "Prometheus", "Grafana", "Ansible"],
+        ["Linux", "MikroTik", "Prometheus", "Grafana", "Ansible"],
         ["sing-box", "nftables", "systemd", "fish"],
     ]
     for r, row in enumerate(rows):

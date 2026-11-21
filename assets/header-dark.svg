@@ -6,18 +6,16 @@
 <text x="44" y="108" fill="#e6edf3" font-size="44" font-weight="700" xml:space="preserve" >gurevsergey</text>
 <rect x="342" y="72" width="20" height="40" fill="#5ec4d0"><animate attributeName="opacity" values="1;0" dur="1.2s" calcMode="discrete" repeatCount="indefinite"/></rect>
 <text x="44" y="142" fill="#b4c0cb" font-size="15.5" font-weight="400" xml:space="preserve" >Networks, monitoring, automation, Rust CLI tools</text>
-<rect x="44.5" y="166.5" width="52" height="24" rx="12" fill="#111922" stroke="#22303c"/>
-<text x="70.0" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Rust</text>
-<rect x="104.5" y="166.5" width="59" height="24" rx="12" fill="#111922" stroke="#22303c"/>
-<text x="133.5" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Linux</text>
-<rect x="171.5" y="166.5" width="81" height="24" rx="12" fill="#111922" stroke="#22303c"/>
-<text x="211.5" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">MikroTik</text>
-<rect x="260.5" y="166.5" width="96" height="24" rx="12" fill="#111922" stroke="#22303c"/>
-<text x="308.0" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Prometheus</text>
-<rect x="364.5" y="166.5" width="74" height="24" rx="12" fill="#111922" stroke="#22303c"/>
-<text x="401.0" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Grafana</text>
-<rect x="446.5" y="166.5" width="74" height="24" rx="12" fill="#111922" stroke="#22303c"/>
-<text x="483.0" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Ansible</text>
+<rect x="44.5" y="166.5" width="59" height="24" rx="12" fill="#111922" stroke="#22303c"/>
+<text x="73.5" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Linux</text>
+<rect x="111.5" y="166.5" width="81" height="24" rx="12" fill="#111922" stroke="#22303c"/>
+<text x="151.5" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">MikroTik</text>
+<rect x="200.5" y="166.5" width="96" height="24" rx="12" fill="#111922" stroke="#22303c"/>
+<text x="248.0" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Prometheus</text>
+<rect x="304.5" y="166.5" width="74" height="24" rx="12" fill="#111922" stroke="#22303c"/>
+<text x="341.0" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Grafana</text>
+<rect x="386.5" y="166.5" width="74" height="24" rx="12" fill="#111922" stroke="#22303c"/>
+<text x="423.0" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Ansible</text>
 <rect x="44.5" y="198.5" width="81" height="24" rx="12" fill="#111922" stroke="#22303c"/>
 <text x="84.5" y="215" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">sing-box</text>
 <rect x="133.5" y="198.5" width="81" height="24" rx="12" fill="#111922" stroke="#22303c"/>
