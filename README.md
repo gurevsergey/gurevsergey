@@ -17,3 +17,5 @@ Networks first: routing, tunnels and firewalls on Linux and MikroTik, watched wi
 </a>
 
 **[next-hop](https://github.com/gurevsergey/next-hop)**: `hop`, a command-line location switcher for sing-box with per-app routing, failover and a kill switch.
+
+**[dotfiles](https://github.com/gurevsergey/dotfiles)**: my Arch Linux desktop on Hyprland, with Waybar, kitty, fish, rofi and Zed in one palette.
