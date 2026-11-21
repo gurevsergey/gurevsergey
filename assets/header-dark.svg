@@ -17,13 +17,11 @@
 <rect x="386.5" y="166.5" width="74" height="24" rx="12" fill="#111922" stroke="#22303c"/>
 <text x="423.0" y="183" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Ansible</text>
 <rect x="44.5" y="198.5" width="81" height="24" rx="12" fill="#111922" stroke="#22303c"/>
-<text x="84.5" y="215" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">sing-box</text>
-<rect x="133.5" y="198.5" width="81" height="24" rx="12" fill="#111922" stroke="#22303c"/>
-<text x="173.5" y="215" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">nftables</text>
-<rect x="222.5" y="198.5" width="74" height="24" rx="12" fill="#111922" stroke="#22303c"/>
-<text x="259.0" y="215" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">systemd</text>
-<rect x="304.5" y="198.5" width="52" height="24" rx="12" fill="#111922" stroke="#22303c"/>
-<text x="330.0" y="215" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">fish</text>
+<text x="84.5" y="215" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">nftables</text>
+<rect x="133.5" y="198.5" width="74" height="24" rx="12" fill="#111922" stroke="#22303c"/>
+<text x="170.0" y="215" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">systemd</text>
+<rect x="215.5" y="198.5" width="52" height="24" rx="12" fill="#111922" stroke="#22303c"/>
+<text x="241.0" y="215" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">fish</text>
 <line x1="566" y1="127" x2="636" y2="74" stroke="#2a3a47" stroke-width="1.5"/>
 <line x1="566" y1="127" x2="636" y2="182" stroke="#2a3a47" stroke-width="1.5"/>
 <line x1="636" y1="74" x2="710" y2="110" stroke="#2a3a47" stroke-width="1.5"/>

@@ -73,7 +73,7 @@ def header(c):
                   c["soft"], 15.5))
     rows = [
         ["Linux", "MikroTik", "Prometheus", "Grafana", "Ansible"],
-        ["sing-box", "nftables", "systemd", "fish"],
+        ["nftables", "systemd", "fish"],
     ]
     for r, row in enumerate(rows):
         x, y = 44, 166 + r * 32
