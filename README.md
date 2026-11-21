@@ -8,14 +8,16 @@ Networks first: routing, tunnels and firewalls on Linux and MikroTik, watched wi
 
 ### Featured
 
-<a href="https://github.com/gurevsergey/next-hop">
+<a href="https://github.com/gurevsergey/mtcap">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/next-hop-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/next-hop-light.svg">
-    <img src="assets/next-hop-dark.svg" width="100%" alt="next-hop: command-line location switcher for sing-box, with a terminal demo of the hop command">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/mtcap-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/mtcap-light.svg">
+    <img src="assets/mtcap-dark.svg" width="100%" alt="mtcap: live packet capture from MikroTik routers into Wireshark, with a terminal demo of a DNS capture">
   </picture>
 </a>
 
-**[next-hop](https://github.com/gurevsergey/next-hop)**: `hop`, a command-line location switcher for sing-box with per-app routing, failover and a kill switch.
+**[mtcap](https://github.com/gurevsergey/mtcap)**: live packet capture from MikroTik routers into Wireshark, with filter presets and capture reports.
+
+**[next-hop](https://github.com/gurevsergey/next-hop)**: `hop`, a command-line location switcher with per-app routing, failover and a kill switch.
 
 **[dotfiles](https://github.com/gurevsergey/dotfiles)**: my Arch Linux desktop on Hyprland, with Waybar, kitty, fish, rofi and Zed in one palette.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds the profile graphics: assets/{header,next-hop}-{dark,light}.svg.
+"""Builds the profile graphics: assets/{header,mtcap}-{dark,light}.svg.
 
 Run from the repository root:  python3 scripts/build.py
 """
@@ -12,12 +12,12 @@ THEMES = {
     "dark": dict(
         bg="#0b1016", panel="#111922", border="#22303c", text="#e6edf3",
         soft="#b4c0cb", muted="#7d8b99", accent="#5ec4d0", warm="#e8b88a",
-        dim="#2a3a47",
+        dim="#2a3a47", err="#e88879",
     ),
     "light": dict(
         bg="#f6f8f9", panel="#ffffff", border="#d3dce2", text="#17212b",
         soft="#3d4b57", muted="#647381", accent="#14808f", warm="#a8632a",
-        dim="#c3ced6",
+        dim="#c3ced6", err="#c0392b",
     ),
 }
 
@@ -112,9 +112,10 @@ def header(c):
 
 # ----------------------------------------------------------- project card
 
-CYCLE = 14.0
-CH = 8.4          # advance of one 14px monospace glyph
-X0 = 46
+CYCLE = 16.0
+SIZE = 13
+CH = 7.8          # advance of one 13px monospace glyph
+X0 = 44
 
 
 def kt(t):
@@ -138,83 +139,91 @@ def typed(idx, y, cmd, start, end, c):
             f'calcMode="discrete" repeatCount="indefinite"/>')
     cx = X0 + 2 * CH
     return (
-        f'<clipPath id="t{idx}"><rect x="{cx - 2:.1f}" y="{y - 16}" '
-        f'width="{full}" height="24">{anim}</rect></clipPath>'
+        f'<clipPath id="t{idx}"><rect x="{cx - 2:.1f}" y="{y - 15}" '
+        f'width="{full}" height="22">{anim}</rect></clipPath>'
         f'<g>{appear(max(start - 0.5, 0.01))}'
-        f'{text(X0, y, "$", c["muted"])}'
-        f'<g clip-path="url(#t{idx})">{text(f"{cx:.1f}", y, cmd, c["text"])}</g></g>'
+        f'{text(X0, y, "$", c["muted"], SIZE)}'
+        f'<g clip-path="url(#t{idx})">{text(f"{cx:.1f}", y, cmd, c["text"], SIZE)}</g></g>'
     )
 
 
 def output(y, parts, t, c):
     """parts: list of (string, colour key); laid out as one line."""
     spans = "".join(f'<tspan fill="{c[k]}">{escape(s)}</tspan>' for s, k in parts)
-    return (f'<text x="{X0}" y="{y}" font-size="14" xml:space="preserve">'
+    return (f'<text x="{X0}" y="{y}" font-size="{SIZE}" xml:space="preserve">'
             f'{appear(t)}{spans}</text>')
 
 
+def packet(line, proto, body, proto_colour="accent"):
+    """Split a capture line into time, addresses, protocol and the rest."""
+    i = line.index(proto, 12)
+    return [(line[:12], "muted"), (line[12:i], "soft"),
+            (proto, proto_colour), (line[i + len(proto):], body)]
+
+
 def card(c):
-    W, H = 880, 340
+    W, H = 880, 404
     p = [
         f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14" '
         f'fill="{c["bg"]}" stroke="{c["border"]}"/>',
-        # terminal window
-        f'<rect x="24.5" y="24.5" width="500" height="291" rx="10" '
-        f'fill="{c["panel"]}" stroke="{c["border"]}"/>',
-        f'<line x1="25" y1="58.5" x2="524" y2="58.5" stroke="{c["border"]}"/>',
     ]
+
+    # title block
+    p.append(text(32, 54, "mtcap", c["text"], 26, 700))
+    p.append(f'<circle cx="131" cy="45" r="5" fill="{c["warm"]}"/>')
+    p.append(text(144, 49.5, "Rust", c["muted"], 13))
+    p.append(text(848, 50, "gurevsergey/mtcap →", c["accent"], 13, 700,
+                  extra='text-anchor="end"'))
+    p.append(text(32, 82, "Live packet capture from MikroTik routers into Wireshark",
+                  c["soft"], 14))
+    p.append(text(32, 104, "RouterOS API · TZSP · filter presets · capture reports · router watchdog",
+                  c["muted"], 12.5))
+
+    # terminal window
+    top = 124
+    p.append(f'<rect x="24.5" y="{top}.5" width="831" height="{H - top - 25}" rx="10" '
+             f'fill="{c["panel"]}" stroke="{c["border"]}"/>')
+    p.append(f'<line x1="25" y1="{top + 34}.5" x2="855" y2="{top + 34}.5" stroke="{c["border"]}"/>')
     for i in range(3):
-        p.append(f'<circle cx="{46 + i * 18}" cy="42" r="5" fill="{c["dim"]}"/>')
-    p.append(text(274, 46, "hop", c["muted"], 12, extra='text-anchor="middle"'))
+        p.append(f'<circle cx="{46 + i * 18}" cy="{top + 17}" r="5" fill="{c["dim"]}"/>')
+    p.append(text(440, top + 21, "mtcap", c["muted"], 12, extra='text-anchor="middle"'))
 
-    p.append(typed(1, 90, "hop warsaw", 0.6, 1.5, c))
-    p.append(output(114, [("→ ", "accent"), ("🇵🇱 Warsaw, Poland", "soft")], 1.9, c))
+    y0, lh = top + 60, 22
+    row = lambda n: y0 + n * lh
 
-    p.append(typed(2, 150, "hop rule tun firefox oulu", 3.2, 5.0, c))
-    p.append(output(174, [("added: app  firefox  ", "soft"), ("tun", "warm"),
-                          (" → ", "accent"), ("🇫🇮 Oulu, Finland", "soft")], 5.4, c))
-
-    p.append(typed(3, 210, "hop off", 6.8, 7.4, c))
-    p.append(output(234, [("main route direct, still through tunnel:", "soft")], 7.8, c))
-    p.append(output(258, [("  app  firefox  ", "soft"), ("tun", "warm"),
-                          (" → ", "accent"), ("🇫🇮 Oulu, Finland", "soft")], 7.8, c))
-
-    p.append(
-        f'<g>{appear(8.6)}{text(X0, 294, "$", c["muted"])}'
-        f'<rect x="{X0 + 2 * CH:.1f}" y="280" width="9" height="18" fill="{c["accent"]}">'
-        f'<animate attributeName="opacity" values="1;0" dur="1.2s" '
-        f'calcMode="discrete" repeatCount="indefinite"/></rect></g>'
-    )
-
-    # description column
-    x = 556
-    p.append(text(x, 70, "next-hop", c["text"], 26, 700))
-    p.append(f'<circle cx="{x + 5}" cy="92" r="5" fill="{c["warm"]}"/>')
-    p.append(text(x + 18, 96.5, "Rust", c["muted"], 13))
-    p.append(text(x, 132, "Command-line location switcher", c["soft"], 14))
-    p.append(text(x, 152, "for sing-box", c["soft"], 14))
-    for i, line in enumerate([
-        "per-app and per-site routing",
-        "latency checks and failover",
-        "nftables kill switch",
-        "switching without reconnects",
-        "fish, Waybar and rofi bits",
-    ]):
-        y = 186 + i * 22
-        p.append(text(x, y, "›", c["accent"], 13, 700))
-        p.append(text(x + 16, y, line, c["muted"], 13))
-    p.append(text(x, 306, "gurevsergey/next-hop →", c["accent"], 13, 700))
+    p.append(typed(1, row(0), "mtcap home dns -i bridge", 0.6, 2.2, c))
+    p.append(output(row(1), [("mtcap: ", "muted"),
+                             ("home → 192.168.88.10, preset dns", "soft")], 2.6, c))
+    p.append(output(row(2), [("       router sends: ", "muted"),
+                             ("interface=bridge and port=53", "warm")], 2.6, c))
+    p.append(output(row(3), [("mtcap: ", "muted"),
+                             ("capturing from 192.168.88.1 on eth0 for up to 600 s; "
+                              "Ctrl-C to stop", "soft")], 3.2, c))
+    p.append(output(row(4), [("time                   source   destination      "
+                              "proto   what", "muted")], 3.8, c))
+    p.append(output(row(5), packet(
+        "10:15:02.114           laptop → home             DNS       A     "
+        "example.com → 93.184.215.14  17 ms", "DNS", "soft"), 4.8, c))
+    p.append(output(row(6), packet(
+        "10:15:07.920           laptop → home             DNS     ✗ AAAA  "
+        "printer.lan  NXDOMAIN  1 ms", "DNS", "err"), 6.6, c))
+    p.append(output(row(7), packet(
+        "10:15:09.301            phone → home             DNS     ? A     "
+        "slow.example  no answer seen", "DNS", "warm"), 9.4, c))
+    p.append(output(row(8), packet(
+        "10:15:11.530               tv → 192.168.88.255   UDP     "
+        "52100 → 9999 Len=24  ×4", "UDP", "muted", "muted"), 11.0, c))
 
     return svg(W, H, "\n".join(p),
-               "next-hop: command-line location switcher for sing-box, "
-               "with a terminal demo of the hop command")
+               "mtcap: live packet capture from MikroTik routers into Wireshark, "
+               "with a terminal demo of a DNS capture")
 
 
 def main():
     OUT.mkdir(exist_ok=True)
     for name, c in THEMES.items():
         (OUT / f"header-{name}.svg").write_text(header(c), encoding="utf-8")
-        (OUT / f"next-hop-{name}.svg").write_text(card(c), encoding="utf-8")
+        (OUT / f"mtcap-{name}.svg").write_text(card(c), encoding="utf-8")
     print("written:", ", ".join(sorted(f.name for f in OUT.glob("*.svg"))))
 
 
