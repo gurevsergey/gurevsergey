@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 280" width="880" height="280" role="img" aria-label="gurevsergey: networks, monitoring, automation. Drawn as the front panel of a switch whose ports are Linux, MikroTik, Prometheus, Grafana, Ansible, Docker, nftables, systemd, Git, Bash, fish." font-family="ui-monospace, 'SF Mono', 'JetBrains Mono', 'Cascadia Mono', Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace">
+<rect x="0.5" y="0.5" width="879" height="279" rx="14" fill="#0b1016" stroke="#22303c"/>
+<text x="28" y="34" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" >$ show interfaces status</text>
+<rect x="24.5" y="50.5" width="831" height="183" rx="6" fill="#111922" stroke="#22303c"/>
+<rect x="24.5" y="50.5" width="29" height="183" rx="6" fill="#0b1016" stroke="#22303c"/>
+<circle cx="39" cy="80" r="5" fill="none" stroke="#2a3a47" stroke-width="2"/>
+<circle cx="39" cy="204" r="5" fill="none" stroke="#2a3a47" stroke-width="2"/>
+<rect x="826.5" y="50.5" width="29" height="183" rx="6" fill="#0b1016" stroke="#22303c"/>
+<circle cx="841" cy="80" r="5" fill="none" stroke="#2a3a47" stroke-width="2"/>
+<circle cx="841" cy="204" r="5" fill="none" stroke="#2a3a47" stroke-width="2"/>
+<text x="72" y="124" fill="#e6edf3" font-size="22" font-weight="700" xml:space="preserve" >gurevsergey</text>
+<text x="72" y="146" fill="#7d8b99" font-size="11" font-weight="400" xml:space="preserve" >networks · monitoring · automation</text>
+<circle cx="76" cy="174" r="3.5" fill="#4cc38a"></circle>
+<text x="85" y="178" fill="#7d8b99" font-size="10" font-weight="400" xml:space="preserve" >PWR</text>
+<circle cx="138" cy="174" r="3.5" fill="#4cc38a"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></circle>
+<text x="147" y="178" fill="#7d8b99" font-size="10" font-weight="400" xml:space="preserve" >SYS</text>
+<circle cx="200" cy="174" r="3.5" fill="#2a3a47"></circle>
+<text x="209" y="178" fill="#7d8b99" font-size="10" font-weight="400" xml:space="preserve" >ALM</text>
+<rect x="329.5" y="78.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="344.5" y="106.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="338" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="343" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="348" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="353" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="358" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="363" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="333" y="68" width="12" height="4" rx="1" fill="#4cc38a"/>
+<rect x="359" y="68" width="12" height="4" rx="1" fill="#e8b88a"><animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="1.1s" repeatCount="indefinite"/></rect>
+<text x="352.0" y="131" fill="#b4c0cb" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">Linux</text>
+<rect x="413.5" y="78.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="428.5" y="106.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="422" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="427" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="432" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="437" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="442" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="447" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="417" y="68" width="12" height="4" rx="1" fill="#4cc38a"/>
+<rect x="443" y="68" width="12" height="4" rx="1" fill="#e8b88a"><animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="1.2s" repeatCount="indefinite"/></rect>
+<text x="436.0" y="131" fill="#b4c0cb" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">MikroTik</text>
+<rect x="497.5" y="78.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="512.5" y="106.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="506" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="511" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="516" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="521" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="526" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="531" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="501" y="68" width="12" height="4" rx="1" fill="#4cc38a"/>
+<rect x="527" y="68" width="12" height="4" rx="1" fill="#e8b88a"><animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="1.3s" repeatCount="indefinite"/></rect>
+<text x="520.0" y="131" fill="#b4c0cb" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">Prometheus</text>
+<rect x="581.5" y="78.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="596.5" y="106.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="590" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="595" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="600" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="605" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="610" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="615" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="585" y="68" width="12" height="4" rx="1" fill="#4cc38a"/>
+<rect x="611" y="68" width="12" height="4" rx="1" fill="#e8b88a"><animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="1.4s" repeatCount="indefinite"/></rect>
+<text x="604.0" y="131" fill="#b4c0cb" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">Grafana</text>
+<rect x="665.5" y="78.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="680.5" y="106.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="674" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="679" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="684" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="689" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="694" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="699" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="669" y="68" width="12" height="4" rx="1" fill="#4cc38a"/>
+<rect x="695" y="68" width="12" height="4" rx="1" fill="#e8b88a"><animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="1.5s" repeatCount="indefinite"/></rect>
+<text x="688.0" y="131" fill="#b4c0cb" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">Ansible</text>
+<rect x="749.5" y="78.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="764.5" y="106.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="758" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="763" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="768" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="773" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="778" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="783" y="84" width="2" height="9" fill="#2a3a47"/>
+<rect x="753" y="68" width="12" height="4" rx="1" fill="#4cc38a"/>
+<rect x="779" y="68" width="12" height="4" rx="1" fill="#e8b88a"><animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="1.6s" repeatCount="indefinite"/></rect>
+<text x="772.0" y="131" fill="#b4c0cb" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">Docker</text>
+<rect x="329.5" y="158.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="344.5" y="186.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="338" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="343" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="348" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="353" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="358" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="363" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="333" y="148" width="12" height="4" rx="1" fill="#4cc38a"/>
+<rect x="359" y="148" width="12" height="4" rx="1" fill="#e8b88a"><animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="1.7s" repeatCount="indefinite"/></rect>
+<text x="352.0" y="211" fill="#b4c0cb" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">nftables</text>
+<rect x="413.5" y="158.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="428.5" y="186.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="422" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="427" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="432" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="437" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="442" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="447" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="417" y="148" width="12" height="4" rx="1" fill="#4cc38a"/>
+<rect x="443" y="148" width="12" height="4" rx="1" fill="#e8b88a"><animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="1.8s" repeatCount="indefinite"/></rect>
+<text x="436.0" y="211" fill="#b4c0cb" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">systemd</text>
+<rect x="497.5" y="158.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="512.5" y="186.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="506" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="511" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="516" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="521" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="526" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="531" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="501" y="148" width="12" height="4" rx="1" fill="#4cc38a"/>
+<rect x="527" y="148" width="12" height="4" rx="1" fill="#e8b88a"><animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="1.9s" repeatCount="indefinite"/></rect>
+<text x="520.0" y="211" fill="#b4c0cb" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">Git</text>
+<rect x="581.5" y="158.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="596.5" y="186.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="590" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="595" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="600" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="605" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="610" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="615" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="585" y="148" width="12" height="4" rx="1" fill="#4cc38a"/>
+<rect x="611" y="148" width="12" height="4" rx="1" fill="#e8b88a"><animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="1.1s" repeatCount="indefinite"/></rect>
+<text x="604.0" y="211" fill="#b4c0cb" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">Bash</text>
+<rect x="665.5" y="158.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="680.5" y="186.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="674" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="679" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="684" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="689" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="694" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="699" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="669" y="148" width="12" height="4" rx="1" fill="#4cc38a"/>
+<rect x="695" y="148" width="12" height="4" rx="1" fill="#e8b88a"><animate attributeName="opacity" values="1;0.15;1;1;0.15;1" dur="1.2s" repeatCount="indefinite"/></rect>
+<text x="688.0" y="211" fill="#b4c0cb" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">fish</text>
+<rect x="749.5" y="158.5" width="46" height="36" rx="3" fill="#0b1016" stroke="#22303c"/>
+<rect x="764.5" y="186.5" width="16" height="8" fill="#111922" stroke="#22303c"/>
+<rect x="758" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="763" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="768" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="773" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="778" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="783" y="164" width="2" height="9" fill="#2a3a47"/>
+<rect x="753" y="148" width="12" height="4" rx="1" fill="#2a3a47"/>
+<rect x="779" y="148" width="12" height="4" rx="1" fill="#2a3a47"/>
+<text x="772.0" y="211" fill="#7d8b99" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">free</text>
+<text x="28" y="260" fill="#7d8b99" font-size="12" font-weight="400" xml:space="preserve" >11 ports up, 1 free</text>
+</svg>

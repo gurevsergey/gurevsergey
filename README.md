@@ -1,12 +1,24 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dashboard-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/dashboard-light.svg">
-  <img src="assets/dashboard-dark.svg" width="100%" alt="gurevsergey: networks, monitoring, automation, Rust CLI tools, drawn as a dashboard with a network topology and a traffic chart">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/switch-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/switch-light.svg">
+  <img src="assets/switch-dark.svg" width="100%" alt="gurevsergey: networks, monitoring, automation, drawn as the front panel of a switch whose ports are the stack">
 </picture>
 
-Networks first: routing, tunnels and firewalls on Linux and MikroTik, watched with Prometheus and Grafana, rolled out with Ansible. When a tool is missing, I write it in Rust.
+# 👋 Hi, I'm Sergey
 
-### Tech Stack
+## 🌐 Network Engineer
+
+Networks first: routing, tunnels and firewalls on Linux and MikroTik, watched with Prometheus and Grafana, rolled out with Ansible. When a tool is missing, I write it myself.
+
+### 🚀 About Me
+
+- 🌐 Network engineer working with MikroTik RouterOS and Linux routing
+- 📈 Monitoring with Prometheus and Grafana, rollouts with Ansible
+- 🦀 I write the command-line tools I miss in Rust: [mtcap](https://github.com/gurevsergey/mtcap), [next-hop](https://github.com/gurevsergey/next-hop)
+- 🧪 A routing lab in EVE-NG at home for BGP practice
+- 📝 Every change ends in a note: what was asked, what was done, how it was checked
+
+### 🛠 Tech Stack
 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![MikroTik](https://img.shields.io/badge/MikroTik-293239?style=for-the-badge&logo=mikrotik&logoColor=white)
@@ -20,12 +32,13 @@ Networks first: routing, tunnels and firewalls on Linux and MikroTik, watched wi
 ![Bash](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnubash&logoColor=white)
 ![fish](https://img.shields.io/badge/fish-34C534?style=for-the-badge&logo=fishshell&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=archlinux&logoColor=white)
 ![Hyprland](https://img.shields.io/badge/Hyprland-58E1FF?style=for-the-badge&logo=hyprland&logoColor=black)
 ![Neovim](https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white)
 ![tmux](https://img.shields.io/badge/tmux-1BB91F?style=for-the-badge&logo=tmux&logoColor=white)
 
-### Featured
+### ⭐ Featured
 
 <a href="https://github.com/gurevsergey/mtcap">
   <picture>
@@ -35,7 +48,7 @@ Networks first: routing, tunnels and firewalls on Linux and MikroTik, watched wi
   </picture>
 </a>
 
-### Projects
+### 📦 Projects
 
 | Project | What it does | Built with |
 |---|---|---|
@@ -43,12 +56,10 @@ Networks first: routing, tunnels and firewalls on Linux and MikroTik, watched wi
 | **[next-hop](https://github.com/gurevsergey/next-hop)** | `hop`, a command-line location switcher with per-app routing, failover and a kill switch | Rust, nftables, systemd |
 | **[dotfiles](https://github.com/gurevsergey/dotfiles)** | My Arch Linux desktop on Hyprland with Waybar, kitty, fish, rofi, Neovim and tmux, plus guides to the tmux and Neovim setup | Lua, shell, Python |
 
-### How I work
+### 📊 GitHub Stats
 
-- **Measure before changing.** A capture or a graph first, a config change second.
-- **Leave the router as I found it.** My tools restore settings on exit and carry a watchdog for when the laptop disappears.
-- **Write it down.** Every change ends in a note: what was asked, what was done, how it was checked.
-
-### Lab
-
-At home: a routing lab in EVE-NG for BGP practice, and a Prometheus and Grafana stack watching the network.
+<picture>
+  <source srcset="https://streak-stats.demolab.com/?user=gurevsergey&card_width=420&theme=tokyonight" media="(prefers-color-scheme: dark)">
+  <source srcset="https://streak-stats.demolab.com/?user=gurevsergey&card_width=420" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+  <img src="https://streak-stats.demolab.com/?user=gurevsergey&card_width=420&theme=tokyonight" alt="Contribution streak">
+</picture>
