@@ -13,11 +13,13 @@ THEMES = {
         bg="#0b1016", panel="#111922", border="#22303c", text="#e6edf3",
         soft="#b4c0cb", muted="#7d8b99", accent="#5ec4d0", warm="#e8b88a",
         dim="#2a3a47", err="#e88879",
+        s1="#1fa6ba", s2="#d67a2c", good="#4cc38a",
     ),
     "light": dict(
         bg="#f6f8f9", panel="#ffffff", border="#d3dce2", text="#17212b",
         soft="#3d4b57", muted="#647381", accent="#14808f", warm="#a8632a",
         dim="#c3ced6", err="#c0392b",
+        s1="#0e8aa0", s2="#b8601c", good="#1a7f4b",
     ),
 }
 
@@ -39,53 +41,82 @@ def svg(w, h, body, label):
 
 
 # ---------------------------------------------------------------- header
+# The header is drawn as a monitoring dashboard: a top bar and four panels.
+# The traffic series is illustrative, generated from a fixed seed.
+
+def panel(x, y, w, h, title, c):
+    return (f'<rect x="{x}.5" y="{y}.5" width="{w - 1}" height="{h - 1}" rx="8" '
+            f'fill="{c["panel"]}" stroke="{c["border"]}"/>'
+            + (text(x + 16, y + 23, title, c["muted"], 12) if title else ""))
+
+
+def pill(x, y, label, c, fill=None):
+    w = round(len(label) * 7.4 + 22)
+    return w, (f'<rect x="{x}.5" y="{y}.5" width="{w}" height="24" rx="12" '
+               f'fill="{fill or c["bg"]}" stroke="{c["border"]}"/>'
+               + text(x + w / 2, y + 17, label, c["muted"], 12, extra='text-anchor="middle"'))
+
+
+def series(seed, base, swing, n=44):
+    """Deterministic wavy series in 0..100: two sines plus a little seeded noise."""
+    import math
+    import random
+    rnd = random.Random(seed)
+    return [
+        max(4, min(96, base + swing * math.sin(i / 6 + seed)
+                   + swing * 0.4 * math.sin(i / 1.7 + seed * 2) + rnd.uniform(-2, 2)))
+        for i in range(n)
+    ]
+
+
+def polyline(values, x0, x1, y0, y1):
+    """Map 0..100 values to plot coordinates; returns points and path length."""
+    import math
+    n = len(values)
+    pts = [(x0 + (x1 - x0) * i / (n - 1), y1 - (y1 - y0) * v / 100) for i, v in enumerate(values)]
+    length = sum(math.dist(pts[i], pts[i + 1]) for i in range(n - 1))
+    return pts, length
+
 
 def header(c):
-    W, H = 880, 250
+    W, H = 880, 338
+    p = [f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14" '
+         f'fill="{c["bg"]}" stroke="{c["border"]}"/>']
+
+    # ---- top bar
+    for i, (dx, dy) in enumerate([(0, 0), (10, 0), (0, 10), (10, 10)]):
+        p.append(f'<rect x="{20 + dx}" y="{14 + dy}" width="7" height="7" rx="1.5" '
+                 f'fill="{c["accent"] if i == 0 else c["dim"]}"/>')
+    p.append(f'<text x="48" y="28" font-size="13" xml:space="preserve">'
+             f'<tspan fill="{c["muted"]}">dashboards / </tspan>'
+             f'<tspan fill="{c["text"]}" font-weight="700">gurevsergey</tspan></text>')
+    w, body = pill(864 - 96, 11, "refresh 5s", c, c["panel"])
+    p.append(body)
+    w, body = pill(864 - 96 - 8 - 111, 11, "Last 6 hours", c, c["panel"])
+    p.append(body)
+    p.append(f'<circle cx="596" cy="23.5" r="4" fill="{c["good"]}">'
+             f'<animate attributeName="opacity" values="1;0.35;1" dur="2s" '
+             f'repeatCount="indefinite"/></circle>')
+    p.append(text(606, 28, "live", c["muted"], 12))
+    p.append(f'<line x1="1" y1="46.5" x2="{W-1}" y2="46.5" stroke="{c["border"]}"/>')
+
+    # ---- panel: identity
+    p.append(panel(16, 58, 420, 150, "", c))
+    p.append(text(36, 92, "$ whoami", c["muted"], 13))
+    p.append(text(36, 140, "gurevsergey", c["text"], 38, 700))
+    p.append(f'<rect x="294" y="109" width="17" height="34" fill="{c["accent"]}">'
+             f'<animate attributeName="opacity" values="1;0" dur="1.2s" '
+             f'calcMode="discrete" repeatCount="indefinite"/></rect>')
+    p.append(text(36, 174, "Networks, monitoring, automation, Rust CLI tools", c["soft"], 13))
+
+    # ---- panel: topology
+    p.append(panel(448, 58, 416, 150, "topology", c))
     nodes = {
-        "a": (566, 127), "b": (636, 74), "c": (636, 182), "d": (710, 110),
-        "e": (710, 196), "f": (782, 66), "g": (782, 158), "h": (838, 114),
+        "a": (480, 142), "b": (556, 104), "c": (556, 180), "d": (642, 132),
+        "e": (642, 188), "f": (728, 98), "g": (728, 166), "h": (832, 130),
     }
     links = ["ab", "ac", "bd", "cd", "ce", "df", "dg", "eg", "fh", "gh", "bf"]
     route = "abdgh"
-
-    p = [
-        f'<defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">'
-        f'<circle cx="2" cy="2" r="1" fill="{c["dim"]}"/></pattern>'
-        f'<linearGradient id="fade" x1="0" x2="1" y1="0" y2="0">'
-        f'<stop offset="0.35" stop-color="#fff" stop-opacity="0"/>'
-        f'<stop offset="1" stop-color="#fff" stop-opacity="0.9"/></linearGradient>'
-        f'<mask id="m"><rect width="{W}" height="{H}" fill="url(#fade)"/></mask></defs>',
-        f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14" '
-        f'fill="{c["bg"]}" stroke="{c["border"]}"/>',
-        f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="url(#dots)" mask="url(#m)"/>',
-    ]
-
-    # left column
-    p.append(text(44, 58, "$ whoami", c["muted"], 14))
-    p.append(text(44, 108, "gurevsergey", c["text"], 44, 700))
-    p.append(
-        f'<rect x="342" y="72" width="20" height="40" fill="{c["accent"]}">'
-        f'<animate attributeName="opacity" values="1;0" dur="1.2s" '
-        f'calcMode="discrete" repeatCount="indefinite"/></rect>'
-    )
-    p.append(text(44, 142, "Networks, monitoring, automation, Rust CLI tools",
-                  c["soft"], 15.5))
-    rows = [
-        ["Linux", "MikroTik", "Prometheus", "Grafana", "Ansible"],
-        ["nftables", "systemd", "fish"],
-    ]
-    for r, row in enumerate(rows):
-        x, y = 44, 166 + r * 32
-        for name in row:
-            w = round(len(name) * 7.4 + 22)
-            p.append(f'<rect x="{x}.5" y="{y}.5" width="{w}" height="24" rx="12" '
-                     f'fill="{c["panel"]}" stroke="{c["border"]}"/>')
-            p.append(text(x + w / 2, y + 17, name, c["muted"], 12,
-                          extra='text-anchor="middle"'))
-            x += w + 8
-
-    # route graph
     for a, b in links:
         (x1, y1), (x2, y2) = nodes[a], nodes[b]
         p.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" '
@@ -97,17 +128,68 @@ def header(c):
              f'dur="1.2s" repeatCount="indefinite"/></path>')
     for n, (nx, ny) in nodes.items():
         on = n in route
-        p.append(f'<circle cx="{nx}" cy="{ny}" r="{6 if on else 5}" fill="{c["bg"]}" '
+        p.append(f'<circle cx="{nx}" cy="{ny}" r="{6 if on else 5}" fill="{c["panel"]}" '
                  f'stroke="{c["accent"] if on else c["muted"]}" stroke-width="2"/>')
-    motion = (f'<animateMotion dur="3.6s" repeatCount="indefinite" '
-              f'calcMode="linear"><mpath href="#route"/></animateMotion>')
+    motion = ('<animateMotion dur="3.6s" repeatCount="indefinite" calcMode="linear">'
+              '<mpath href="#route"/></animateMotion>')
     p.append(f'<circle r="11" fill="{c["warm"]}" opacity="0.22">{motion}</circle>')
     p.append(f'<circle r="4.5" fill="{c["warm"]}">{motion}</circle>')
-    p.append(text(566, 151, "src", c["muted"], 12, extra='text-anchor="middle"'))
-    p.append(text(838, 138, "dst", c["muted"], 12, extra='text-anchor="middle"'))
+    p.append(text(480, 166, "src", c["muted"], 11, extra='text-anchor="middle"'))
+    p.append(text(832, 154, "dst", c["muted"], 11, extra='text-anchor="middle"'))
+
+    # ---- panel: traffic (time series, one axis, two series)
+    px, py, pw, ph = 16, 220, 420, 102
+    p.append(panel(px, py, pw, ph, "traffic, Mbit/s", c))
+    lx = px + pw - 16
+    for name, key in (("tx", "s2"), ("rx", "s1")):          # legend, right-aligned
+        p.append(text(lx, py + 23, name, c["muted"], 12, extra='text-anchor="end"'))
+        p.append(f'<rect x="{lx - 28}" y="{py + 17}" width="10" height="3" rx="1.5" fill="{c[key]}"/>')
+        lx -= 48
+    x0, x1, y0, y1 = px + 44, px + pw - 44, py + 38, py + ph - 14
+    for tick in (0, 50, 100):
+        y = y1 - (y1 - y0) * tick / 100
+        p.append(f'<line x1="{x0}" y1="{y:.1f}" x2="{x1}" y2="{y:.1f}" stroke="{c["border"]}" '
+                 f'stroke-width="1"{"" if tick == 0 else " stroke-dasharray=\"2 4\""}/>')
+        p.append(text(x0 - 8, round(y + 3.5, 1), str(tick), c["muted"], 10, extra='text-anchor="end"'))
+    draw = 3.0
+    for name, key, vals in (("rx", "s1", series(7, 66, 14)), ("tx", "s2", series(3, 24, 7))):
+        pts, length = polyline(vals, x0, x1, y0, y1)
+        d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+        if key == "s1":
+            p.append(f'<path d="{d} L{x1},{y1} L{x0},{y1} Z" fill="{c[key]}" opacity="0.1">'
+                     f'<animate attributeName="opacity" values="0;0;0.1" keyTimes="0;0.8;1" '
+                     f'dur="{draw + 0.6}s" fill="freeze"/></path>')
+        p.append(f'<path d="{d}" fill="none" stroke="{c[key]}" stroke-width="2" '
+                 f'stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="{length:.0f}">'
+                 f'<animate attributeName="stroke-dashoffset" from="{length:.0f}" to="0" '
+                 f'dur="{draw}s" fill="freeze"/></path>')
+        ex, ey = pts[-1]
+        shown = (f'<animate attributeName="opacity" values="0;0;1" keyTimes="0;0.96;1" '
+                 f'dur="{draw + 0.1}s" fill="freeze"/>')
+        p.append(f'<g>{shown}'
+                 f'<circle cx="{ex:.1f}" cy="{ey:.1f}" r="4" fill="{c[key]}" opacity="0.3">'
+                 f'<animate attributeName="r" values="4;9;4" dur="2s" repeatCount="indefinite"/>'
+                 f'<animate attributeName="opacity" values="0.35;0;0.35" dur="2s" repeatCount="indefinite"/></circle>'
+                 f'<circle cx="{ex:.1f}" cy="{ey:.1f}" r="4" fill="{c[key]}" stroke="{c["panel"]}" stroke-width="2"/>'
+                 f'{text(round(ex + 10, 1), round(ey + 4, 1), name, c["soft"], 11)}</g>')
+
+    # ---- panel: stack
+    sx, sy = 448, 220
+    p.append(panel(sx, sy, 416, 102, "stack", c))
+    rows = [
+        ["Linux", "MikroTik", "Prometheus", "Grafana"],
+        ["Ansible", "nftables", "systemd", "fish"],
+    ]
+    for r, row in enumerate(rows):
+        x, y = sx + 16, sy + 34 + r * 31
+        for name in row:
+            w, body = pill(x, y, name, c)
+            p.append(body)
+            x += w + 8
 
     return svg(W, H, "\n".join(p),
-               "gurevsergey: networks, monitoring, automation, Rust CLI tools")
+               "gurevsergey: networks, monitoring, automation, Rust CLI tools. "
+               "Drawn as a dashboard with a network topology and a traffic chart.")
 
 
 # ----------------------------------------------------------- project card

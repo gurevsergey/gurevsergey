@@ -1,49 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 250" width="880" height="250" role="img" aria-label="gurevsergey: networks, monitoring, automation, Rust CLI tools" font-family="ui-monospace, 'SF Mono', 'JetBrains Mono', 'Cascadia Mono', Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace">
-<defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#c3ced6"/></pattern><linearGradient id="fade" x1="0" x2="1" y1="0" y2="0"><stop offset="0.35" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0.9"/></linearGradient><mask id="m"><rect width="880" height="250" fill="url(#fade)"/></mask></defs>
-<rect x="0.5" y="0.5" width="879" height="249" rx="14" fill="#f6f8f9" stroke="#d3dce2"/>
-<rect x="1" y="1" width="878" height="248" rx="14" fill="url(#dots)" mask="url(#m)"/>
-<text x="44" y="58" fill="#647381" font-size="14" font-weight="400" xml:space="preserve" >$ whoami</text>
-<text x="44" y="108" fill="#17212b" font-size="44" font-weight="700" xml:space="preserve" >gurevsergey</text>
-<rect x="342" y="72" width="20" height="40" fill="#14808f"><animate attributeName="opacity" values="1;0" dur="1.2s" calcMode="discrete" repeatCount="indefinite"/></rect>
-<text x="44" y="142" fill="#3d4b57" font-size="15.5" font-weight="400" xml:space="preserve" >Networks, monitoring, automation, Rust CLI tools</text>
-<rect x="44.5" y="166.5" width="59" height="24" rx="12" fill="#ffffff" stroke="#d3dce2"/>
-<text x="73.5" y="183" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Linux</text>
-<rect x="111.5" y="166.5" width="81" height="24" rx="12" fill="#ffffff" stroke="#d3dce2"/>
-<text x="151.5" y="183" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">MikroTik</text>
-<rect x="200.5" y="166.5" width="96" height="24" rx="12" fill="#ffffff" stroke="#d3dce2"/>
-<text x="248.0" y="183" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Prometheus</text>
-<rect x="304.5" y="166.5" width="74" height="24" rx="12" fill="#ffffff" stroke="#d3dce2"/>
-<text x="341.0" y="183" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Grafana</text>
-<rect x="386.5" y="166.5" width="74" height="24" rx="12" fill="#ffffff" stroke="#d3dce2"/>
-<text x="423.0" y="183" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Ansible</text>
-<rect x="44.5" y="198.5" width="81" height="24" rx="12" fill="#ffffff" stroke="#d3dce2"/>
-<text x="84.5" y="215" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">nftables</text>
-<rect x="133.5" y="198.5" width="74" height="24" rx="12" fill="#ffffff" stroke="#d3dce2"/>
-<text x="170.0" y="215" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">systemd</text>
-<rect x="215.5" y="198.5" width="52" height="24" rx="12" fill="#ffffff" stroke="#d3dce2"/>
-<text x="241.0" y="215" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">fish</text>
-<line x1="566" y1="127" x2="636" y2="74" stroke="#c3ced6" stroke-width="1.5"/>
-<line x1="566" y1="127" x2="636" y2="182" stroke="#c3ced6" stroke-width="1.5"/>
-<line x1="636" y1="74" x2="710" y2="110" stroke="#c3ced6" stroke-width="1.5"/>
-<line x1="636" y1="182" x2="710" y2="110" stroke="#c3ced6" stroke-width="1.5"/>
-<line x1="636" y1="182" x2="710" y2="196" stroke="#c3ced6" stroke-width="1.5"/>
-<line x1="710" y1="110" x2="782" y2="66" stroke="#c3ced6" stroke-width="1.5"/>
-<line x1="710" y1="110" x2="782" y2="158" stroke="#c3ced6" stroke-width="1.5"/>
-<line x1="710" y1="196" x2="782" y2="158" stroke="#c3ced6" stroke-width="1.5"/>
-<line x1="782" y1="66" x2="838" y2="114" stroke="#c3ced6" stroke-width="1.5"/>
-<line x1="782" y1="158" x2="838" y2="114" stroke="#c3ced6" stroke-width="1.5"/>
-<line x1="636" y1="74" x2="782" y2="66" stroke="#c3ced6" stroke-width="1.5"/>
-<path id="route" d="M566,127 L636,74 L710,110 L782,158 L838,114" fill="none" stroke="#14808f" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 6"><animate attributeName="stroke-dashoffset" from="24" to="0" dur="1.2s" repeatCount="indefinite"/></path>
-<circle cx="566" cy="127" r="6" fill="#f6f8f9" stroke="#14808f" stroke-width="2"/>
-<circle cx="636" cy="74" r="6" fill="#f6f8f9" stroke="#14808f" stroke-width="2"/>
-<circle cx="636" cy="182" r="5" fill="#f6f8f9" stroke="#647381" stroke-width="2"/>
-<circle cx="710" cy="110" r="6" fill="#f6f8f9" stroke="#14808f" stroke-width="2"/>
-<circle cx="710" cy="196" r="5" fill="#f6f8f9" stroke="#647381" stroke-width="2"/>
-<circle cx="782" cy="66" r="5" fill="#f6f8f9" stroke="#647381" stroke-width="2"/>
-<circle cx="782" cy="158" r="6" fill="#f6f8f9" stroke="#14808f" stroke-width="2"/>
-<circle cx="838" cy="114" r="6" fill="#f6f8f9" stroke="#14808f" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 338" width="880" height="338" role="img" aria-label="gurevsergey: networks, monitoring, automation, Rust CLI tools. Drawn as a dashboard with a network topology and a traffic chart." font-family="ui-monospace, 'SF Mono', 'JetBrains Mono', 'Cascadia Mono', Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace">
+<rect x="0.5" y="0.5" width="879" height="337" rx="14" fill="#f6f8f9" stroke="#d3dce2"/>
+<rect x="20" y="14" width="7" height="7" rx="1.5" fill="#14808f"/>
+<rect x="30" y="14" width="7" height="7" rx="1.5" fill="#c3ced6"/>
+<rect x="20" y="24" width="7" height="7" rx="1.5" fill="#c3ced6"/>
+<rect x="30" y="24" width="7" height="7" rx="1.5" fill="#c3ced6"/>
+<text x="48" y="28" font-size="13" xml:space="preserve"><tspan fill="#647381">dashboards / </tspan><tspan fill="#17212b" font-weight="700">gurevsergey</tspan></text>
+<rect x="768.5" y="11.5" width="96" height="24" rx="12" fill="#ffffff" stroke="#d3dce2"/><text x="816.0" y="28" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">refresh 5s</text>
+<rect x="649.5" y="11.5" width="111" height="24" rx="12" fill="#ffffff" stroke="#d3dce2"/><text x="704.5" y="28" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Last 6 hours</text>
+<circle cx="596" cy="23.5" r="4" fill="#1a7f4b"><animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/></circle>
+<text x="606" y="28" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" >live</text>
+<line x1="1" y1="46.5" x2="879" y2="46.5" stroke="#d3dce2"/>
+<rect x="16.5" y="58.5" width="419" height="149" rx="8" fill="#ffffff" stroke="#d3dce2"/>
+<text x="36" y="92" fill="#647381" font-size="13" font-weight="400" xml:space="preserve" >$ whoami</text>
+<text x="36" y="140" fill="#17212b" font-size="38" font-weight="700" xml:space="preserve" >gurevsergey</text>
+<rect x="294" y="109" width="17" height="34" fill="#14808f"><animate attributeName="opacity" values="1;0" dur="1.2s" calcMode="discrete" repeatCount="indefinite"/></rect>
+<text x="36" y="174" fill="#3d4b57" font-size="13" font-weight="400" xml:space="preserve" >Networks, monitoring, automation, Rust CLI tools</text>
+<rect x="448.5" y="58.5" width="415" height="149" rx="8" fill="#ffffff" stroke="#d3dce2"/><text x="464" y="81" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" >topology</text>
+<line x1="480" y1="142" x2="556" y2="104" stroke="#c3ced6" stroke-width="1.5"/>
+<line x1="480" y1="142" x2="556" y2="180" stroke="#c3ced6" stroke-width="1.5"/>
+<line x1="556" y1="104" x2="642" y2="132" stroke="#c3ced6" stroke-width="1.5"/>
+<line x1="556" y1="180" x2="642" y2="132" stroke="#c3ced6" stroke-width="1.5"/>
+<line x1="556" y1="180" x2="642" y2="188" stroke="#c3ced6" stroke-width="1.5"/>
+<line x1="642" y1="132" x2="728" y2="98" stroke="#c3ced6" stroke-width="1.5"/>
+<line x1="642" y1="132" x2="728" y2="166" stroke="#c3ced6" stroke-width="1.5"/>
+<line x1="642" y1="188" x2="728" y2="166" stroke="#c3ced6" stroke-width="1.5"/>
+<line x1="728" y1="98" x2="832" y2="130" stroke="#c3ced6" stroke-width="1.5"/>
+<line x1="728" y1="166" x2="832" y2="130" stroke="#c3ced6" stroke-width="1.5"/>
+<line x1="556" y1="104" x2="728" y2="98" stroke="#c3ced6" stroke-width="1.5"/>
+<path id="route" d="M480,142 L556,104 L642,132 L728,166 L832,130" fill="none" stroke="#14808f" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 6"><animate attributeName="stroke-dashoffset" from="24" to="0" dur="1.2s" repeatCount="indefinite"/></path>
+<circle cx="480" cy="142" r="6" fill="#ffffff" stroke="#14808f" stroke-width="2"/>
+<circle cx="556" cy="104" r="6" fill="#ffffff" stroke="#14808f" stroke-width="2"/>
+<circle cx="556" cy="180" r="5" fill="#ffffff" stroke="#647381" stroke-width="2"/>
+<circle cx="642" cy="132" r="6" fill="#ffffff" stroke="#14808f" stroke-width="2"/>
+<circle cx="642" cy="188" r="5" fill="#ffffff" stroke="#647381" stroke-width="2"/>
+<circle cx="728" cy="98" r="5" fill="#ffffff" stroke="#647381" stroke-width="2"/>
+<circle cx="728" cy="166" r="6" fill="#ffffff" stroke="#14808f" stroke-width="2"/>
+<circle cx="832" cy="130" r="6" fill="#ffffff" stroke="#14808f" stroke-width="2"/>
 <circle r="11" fill="#a8632a" opacity="0.22"><animateMotion dur="3.6s" repeatCount="indefinite" calcMode="linear"><mpath href="#route"/></animateMotion></circle>
 <circle r="4.5" fill="#a8632a"><animateMotion dur="3.6s" repeatCount="indefinite" calcMode="linear"><mpath href="#route"/></animateMotion></circle>
-<text x="566" y="151" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">src</text>
-<text x="838" y="138" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">dst</text>
+<text x="480" y="166" fill="#647381" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">src</text>
+<text x="832" y="154" fill="#647381" font-size="11" font-weight="400" xml:space="preserve" text-anchor="middle">dst</text>
+<rect x="16.5" y="220.5" width="419" height="101" rx="8" fill="#ffffff" stroke="#d3dce2"/><text x="32" y="243" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" >traffic, Mbit/s</text>
+<text x="420" y="243" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="end">tx</text>
+<rect x="392" y="237" width="10" height="3" rx="1.5" fill="#b8601c"/>
+<text x="372" y="243" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="end">rx</text>
+<rect x="344" y="237" width="10" height="3" rx="1.5" fill="#0e8aa0"/>
+<line x1="60" y1="308.0" x2="392" y2="308.0" stroke="#d3dce2" stroke-width="1"/>
+<text x="52" y="311.5" fill="#647381" font-size="10" font-weight="400" xml:space="preserve" text-anchor="end">0</text>
+<line x1="60" y1="283.0" x2="392" y2="283.0" stroke="#d3dce2" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="52" y="286.5" fill="#647381" font-size="10" font-weight="400" xml:space="preserve" text-anchor="end">50</text>
+<line x1="60" y1="258.0" x2="392" y2="258.0" stroke="#d3dce2" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="52" y="261.5" fill="#647381" font-size="10" font-weight="400" xml:space="preserve" text-anchor="end">100</text>
+<path d="M60.0,268.0 L67.7,267.8 L75.4,267.2 L83.2,269.4 L90.9,269.7 L98.6,270.9 L106.3,271.7 L114.0,270.2 L121.8,270.1 L129.5,268.3 L137.2,268.6 L144.9,269.1 L152.7,270.0 L160.4,271.6 L168.1,275.8 L175.8,278.2 L183.5,279.2 L191.3,279.4 L199.0,280.1 L206.7,279.8 L214.4,277.9 L222.1,279.4 L229.9,278.2 L237.6,280.4 L245.3,282.3 L253.0,283.8 L260.7,284.4 L268.5,283.3 L276.2,283.4 L283.9,280.5 L291.6,277.8 L299.3,275.9 L307.1,273.8 L314.8,273.8 L322.5,273.7 L330.2,273.8 L338.0,273.3 L345.7,273.8 L353.4,273.2 L361.1,271.1 L368.8,269.3 L376.6,267.6 L384.3,265.1 L392.0,264.8 L392,308 L60,308 Z" fill="#0e8aa0" opacity="0.1"><animate attributeName="opacity" values="0;0;0.1" keyTimes="0;0.8;1" dur="3.6s" fill="freeze"/></path>
+<path d="M60.0,268.0 L67.7,267.8 L75.4,267.2 L83.2,269.4 L90.9,269.7 L98.6,270.9 L106.3,271.7 L114.0,270.2 L121.8,270.1 L129.5,268.3 L137.2,268.6 L144.9,269.1 L152.7,270.0 L160.4,271.6 L168.1,275.8 L175.8,278.2 L183.5,279.2 L191.3,279.4 L199.0,280.1 L206.7,279.8 L214.4,277.9 L222.1,279.4 L229.9,278.2 L237.6,280.4 L245.3,282.3 L253.0,283.8 L260.7,284.4 L268.5,283.3 L276.2,283.4 L283.9,280.5 L291.6,277.8 L299.3,275.9 L307.1,273.8 L314.8,273.8 L322.5,273.7 L330.2,273.8 L338.0,273.3 L345.7,273.8 L353.4,273.2 L361.1,271.1 L368.8,269.3 L376.6,267.6 L384.3,265.1 L392.0,264.8" fill="none" stroke="#0e8aa0" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="338"><animate attributeName="stroke-dashoffset" from="338" to="0" dur="3.0s" fill="freeze"/></path>
+<g><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.96;1" dur="3.1s" fill="freeze"/><circle cx="392.0" cy="264.8" r="4" fill="#0e8aa0" opacity="0.3"><animate attributeName="r" values="4;9;4" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.35;0;0.35" dur="2s" repeatCount="indefinite"/></circle><circle cx="392.0" cy="264.8" r="4" fill="#0e8aa0" stroke="#ffffff" stroke-width="2"/><text x="402.0" y="268.8" fill="#3d4b57" font-size="11" font-weight="400" xml:space="preserve" >rx</text></g>
+<path d="M60.0,296.4 L67.7,295.6 L75.4,295.8 L83.2,295.6 L90.9,296.3 L98.6,298.5 L106.3,299.8 L114.0,299.2 L121.8,301.1 L129.5,301.3 L137.2,299.4 L144.9,299.7 L152.7,298.0 L160.4,298.0 L168.1,297.2 L175.8,298.1 L183.5,297.3 L191.3,297.2 L199.0,298.0 L206.7,297.3 L214.4,296.7 L222.1,296.8 L229.9,294.0 L237.6,293.1 L245.3,292.8 L253.0,292.9 L260.7,291.3 L268.5,292.6 L276.2,292.8 L283.9,293.0 L291.6,293.5 L299.3,292.9 L307.1,293.5 L314.8,292.2 L322.5,292.6 L330.2,291.8 L338.0,292.6 L345.7,295.2 L353.4,296.5 L361.1,297.7 L368.8,297.2 L376.6,298.9 L384.3,298.6 L392.0,298.9" fill="none" stroke="#b8601c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="335"><animate attributeName="stroke-dashoffset" from="335" to="0" dur="3.0s" fill="freeze"/></path>
+<g><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.96;1" dur="3.1s" fill="freeze"/><circle cx="392.0" cy="298.9" r="4" fill="#b8601c" opacity="0.3"><animate attributeName="r" values="4;9;4" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.35;0;0.35" dur="2s" repeatCount="indefinite"/></circle><circle cx="392.0" cy="298.9" r="4" fill="#b8601c" stroke="#ffffff" stroke-width="2"/><text x="402.0" y="302.9" fill="#3d4b57" font-size="11" font-weight="400" xml:space="preserve" >tx</text></g>
+<rect x="448.5" y="220.5" width="415" height="101" rx="8" fill="#ffffff" stroke="#d3dce2"/><text x="464" y="243" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" >stack</text>
+<rect x="464.5" y="254.5" width="59" height="24" rx="12" fill="#f6f8f9" stroke="#d3dce2"/><text x="493.5" y="271" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Linux</text>
+<rect x="531.5" y="254.5" width="81" height="24" rx="12" fill="#f6f8f9" stroke="#d3dce2"/><text x="571.5" y="271" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">MikroTik</text>
+<rect x="620.5" y="254.5" width="96" height="24" rx="12" fill="#f6f8f9" stroke="#d3dce2"/><text x="668.0" y="271" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Prometheus</text>
+<rect x="724.5" y="254.5" width="74" height="24" rx="12" fill="#f6f8f9" stroke="#d3dce2"/><text x="761.0" y="271" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Grafana</text>
+<rect x="464.5" y="285.5" width="74" height="24" rx="12" fill="#f6f8f9" stroke="#d3dce2"/><text x="501.0" y="302" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">Ansible</text>
+<rect x="546.5" y="285.5" width="81" height="24" rx="12" fill="#f6f8f9" stroke="#d3dce2"/><text x="586.5" y="302" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">nftables</text>
+<rect x="635.5" y="285.5" width="74" height="24" rx="12" fill="#f6f8f9" stroke="#d3dce2"/><text x="672.0" y="302" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">systemd</text>
+<rect x="717.5" y="285.5" width="52" height="24" rx="12" fill="#f6f8f9" stroke="#d3dce2"/><text x="743.0" y="302" fill="#647381" font-size="12" font-weight="400" xml:space="preserve" text-anchor="middle">fish</text>
 </svg>
