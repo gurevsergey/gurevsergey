@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
-  <img src="assets/header-dark.svg" width="100%" alt="gurevsergey: networks, monitoring, automation, Rust CLI tools, drawn as a dashboard with a network topology and a traffic chart">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dashboard-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/dashboard-light.svg">
+  <img src="assets/dashboard-dark.svg" width="100%" alt="gurevsergey: networks, monitoring, automation, Rust CLI tools, drawn as a dashboard with a network topology and a traffic chart">
 </picture>
 
 Networks first: routing, tunnels and firewalls on Linux and MikroTik, watched with Prometheus and Grafana, rolled out with Ansible. When a tool is missing, I write it in Rust.

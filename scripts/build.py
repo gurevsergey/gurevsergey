@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds the profile graphics: assets/{header,mtcap}-{dark,light}.svg.
+"""Builds the profile graphics: assets/{dashboard,mtcap}-{dark,light}.svg.
 
 Run from the repository root:  python3 scripts/build.py
 """
@@ -304,7 +304,7 @@ def card(c):
 def main():
     OUT.mkdir(exist_ok=True)
     for name, c in THEMES.items():
-        (OUT / f"header-{name}.svg").write_text(header(c), encoding="utf-8")
+        (OUT / f"dashboard-{name}.svg").write_text(header(c), encoding="utf-8")
         (OUT / f"mtcap-{name}.svg").write_text(card(c), encoding="utf-8")
     print("written:", ", ".join(sorted(f.name for f in OUT.glob("*.svg"))))
 
