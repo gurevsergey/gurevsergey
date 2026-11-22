@@ -1,0 +1,3 @@
+# The generator is tooling, not the content of this repository:
+# keep it out of the language statistics.
+scripts/** linguist-vendored
