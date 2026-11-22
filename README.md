@@ -4,8 +4,6 @@
   <img src="assets/switch-dark.svg" width="100%" alt="gurevsergey: networks, monitoring, automation, drawn as the front panel of a switch whose ports are the stack">
 </picture>
 
-# 👋 Hi, I'm Sergey
-
 ## 🌐 Network Engineer
 
 Networks first: routing, tunnels and firewalls on Linux and MikroTik, watched with Prometheus and Grafana, rolled out with Ansible. When a tool is missing, I write it myself.
