@@ -1,20 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/switch-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/switch-light.svg">
-  <img src="assets/switch-dark.svg" width="100%" alt="gurevsergey: networks, monitoring, automation, drawn as the front panel of a switch whose ports are the stack">
-</picture>
-
 ## 🌐 Network Engineer
-
-Networks first: routing, tunnels and firewalls on Linux and MikroTik, watched with Prometheus and Grafana, rolled out with Ansible. When a tool is missing, I write it myself.
-
-### 🚀 About Me
-
-- 🌐 Network engineer working with MikroTik RouterOS and Linux routing
-- 📈 Monitoring with Prometheus and Grafana, rollouts with Ansible
-- 🦀 I write the command-line tools I miss in Rust: [mtcap](https://github.com/gurevsergey/mtcap), [next-hop](https://github.com/gurevsergey/next-hop)
-- 🧪 A routing lab in EVE-NG at home for BGP practice
-- 📝 Every change ends in a note: what was asked, what was done, how it was checked
 
 ### 🛠 Tech Stack
 

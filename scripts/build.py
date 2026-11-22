@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds the profile graphics: assets/{switch,mtcap}-{dark,light}.svg.
+"""Builds the profile graphics: assets/mtcap-{dark,light}.svg.
 
 Run from the repository root:  python3 scripts/build.py
 """
@@ -41,6 +41,7 @@ def svg(w, h, body, label):
 
 
 # ---------------------------------------------------------------- header
+# Not used on the profile at the moment; add the call back in main() to restore it.
 # The header is the front panel of a 1U switch: the name is the model label,
 # every port is a technology. Edit PORTS to change them; None is a free port.
 
@@ -219,7 +220,6 @@ def card(c):
 def main():
     OUT.mkdir(exist_ok=True)
     for name, c in THEMES.items():
-        (OUT / f"switch-{name}.svg").write_text(header(c), encoding="utf-8")
         (OUT / f"mtcap-{name}.svg").write_text(card(c), encoding="utf-8")
     print("written:", ", ".join(sorted(f.name for f in OUT.glob("*.svg"))))
 
